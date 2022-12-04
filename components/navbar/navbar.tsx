@@ -9,9 +9,9 @@ import Link from "next/link"
 
 function SidebarIcon({icon , text}:any){
     return(
-        <div className="relative flex items-center justify-center sm:h-16 sm:w-16 w-14 h-14 transition-all duration-300 group hover:bg-black hover:rounded-md">
+        <div className="relative flex items-center justify-center mt-2 mb-2 p-2 sm:h-16 sm:w-16 w-14 h-14 transition-all duration-300 group hover:bg-black hover:rounded-md">
             {icon}
-            <span className="absolute w-auto p-2 m-2 min-w-max left-16 rounded-md shadow-md text-white bg-gray-800 text-md font-bold transition-all duration-100 scale-0 group-hover:scale-100 origin-left">
+            <span className="absolute sm:block hidden w-auto p-2 m-2 min-w-max left-16 rounded-md shadow-md text-white bg-gray-800 text-md font-bold transition-all duration-100 scale-0 group-hover:scale-100 origin-left">
                 {text}
             </span>
         </div>
@@ -20,7 +20,7 @@ function SidebarIcon({icon , text}:any){
 
 export default function MyNavbar(){
     return(
-        <div className='sm:w-24 w-16 h-screen fixed top-0 left-0 m-0 z-10 flex flex-col text-white items-center bg-white/30 backdrop-blur-md gap-y-4 pt-4'>
+        <div id="Navbar" className='sm:w-24 w-0 h-screen fixed top-0 left-0 m-0 z-10 flex flex-col text-white items-center bg-white/30 backdrop-blur-md pt-4 sm:overflow-visible overflow-y-scroll transition-all duration-300'>
             <Link href="/">
                 <SidebarIcon icon={<AiOutlineHome size="32"></AiOutlineHome>} text="Home"></SidebarIcon>
             </Link>

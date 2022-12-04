@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import SvgBG from '../components/background/background'
+import MySkills from '../components/myskills/myskills'
 import {BiDownArrow} from "@react-icons/all-files/bi/BiDownArrow"
 
 function WelcomePlace(){
@@ -24,7 +25,7 @@ export default function Home() {
     <div className='w-full min-h-screen flex flex-col overflow-auto justify-center items-center'>
       <SvgBG></SvgBG>
       <WelcomePlace></WelcomePlace>
-      <div className='w-full h-[1000px] border-2 border-red-500'></div>
+      <MySkills></MySkills>
     </div>
   )
 }
