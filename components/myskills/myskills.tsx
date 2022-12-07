@@ -11,7 +11,7 @@ import Image from 'next/image';
 
 export default function MySkills() {
     return (
-        <div className='w-full min-h-screen flex flex-col justify-center items-center pt-2 pb-2 gap-y-8'>
+        <div id="skillsPage" className='w-full min-h-screen flex flex-col justify-center items-center pt-2 pb-2 gap-y-8'>
             <div className='flex flex-col justify-center items-center text-center'>
                 <span className='text-white font-JetBrainsMonoBold text-2xl'>Programming Languages and Software I Know</span>
                 <div className='flex justify-center items-center p-4 gap-x-4 flex-wrap sm:w-full w-1/2'>

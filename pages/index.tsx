@@ -15,7 +15,7 @@ function WelcomePlace(){
         <span className='text-5xl text-white font-bold flex justify-start items-start w-full'>Portfolio</span>
         <span className='text-5xl text-white font-bold flex justify-start items-start w-full'>Page</span>
       </div>
-      <a href="#" className='text-white transition-all duration-200 hover:scale-150'><BiDownArrow size="30"></BiDownArrow></a>
+      <a href="#skillsPage" className='text-white transition-all duration-200 hover:scale-150'><BiDownArrow size="30"></BiDownArrow></a>
     </div>
   );
 }
