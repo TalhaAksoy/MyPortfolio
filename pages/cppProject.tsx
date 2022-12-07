@@ -11,7 +11,7 @@ const ProjectLine = ({Lang , Desc, Link}:any) =>{
                 {Desc}
             </div>
             <div className=" sm:w-2/12 w-full h-full flex justify-center items-center text-2xl">
-                <a href={Link} className="w-full" target="_blank">Project Link</a>
+                <a href={Link} className="w-full" target="_blank" rel="noreferrer">Project Link</a>
             </div>
         </div>
     );
