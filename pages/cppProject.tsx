@@ -3,10 +3,9 @@ import Link from "next/link";
 import Cpng from '../imgs/c.png';
 import CppPng from '../imgs/cpp.png';
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const ProjectLine = ({ Lang, Desc, Link, Img }: any) => {
-    console.log(Cpng)
-    console.log(CppPng)
     return (
         /*<div className="sm:w-10/12 w-11/12 text-center border-2 sm:h-20 flex sm:flex-row sm:gap-y-0 gap-y-2 flex-col justify-start items-center rounded-md sm:py-0 py-2 text-white sm:transition-all sm:duration-200 sm:hover:bg-white sm:hover:text-black group">
             <div id="Project Lang" className="select-none text-4xl font-JetBrainsMonoBold w-1/12 h-full flex justify-center items-center">
@@ -31,7 +30,7 @@ const ProjectLine = ({ Lang, Desc, Link, Img }: any) => {
                 </div>
             </div>
             <a href={Link} className="w-full">
-                <button className="btn w-full bg-purple-600 text-white">Glass button</button>
+                <button className="btn w-full bg-purple-600 text-white">Project Page</button>
             </a>
         </div>
     );

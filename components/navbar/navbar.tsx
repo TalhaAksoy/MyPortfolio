@@ -24,13 +24,13 @@ export default function MyNavbar(){
             <Link passHref href="/">
                 <SidebarIcon icon={<AiOutlineHome size="32"></AiOutlineHome>} text="Home"></SidebarIcon>
             </Link>
-            <span className="border-[1px] sm:w-16 w-10/12 border-black"></span>
+            <span className="border-[1px] sm:w-16 w-10/12 sm:border-white border-black"></span>
             <SidebarIcon icon={<AiOutlineQuestionCircle size="32"></AiOutlineQuestionCircle>} text="Coming Soon..."></SidebarIcon>
             <SidebarIcon icon={<AiOutlineQuestionCircle size="32"></AiOutlineQuestionCircle>} text="Coming Soon..."></SidebarIcon>
             <Link passHref href="/cppProject">
                 <SidebarIcon icon="C++" text="C && C++ Project"></SidebarIcon>
             </Link>
-            <span className="border-[1px] sm:w-16 w-10/12 border-black"></span>
+            <span className="border-[1px] sm:w-16 w-10/12 sm:border-white border-black"></span>
             <Link passHref href="https://www.instagram.com/tlhksy3" target="_blank">
                 <SidebarIcon icon={<AiOutlineInstagram size="32"></AiOutlineInstagram>} text="Instagram"></SidebarIcon>
             </Link>

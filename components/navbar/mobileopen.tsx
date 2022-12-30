@@ -6,7 +6,6 @@ export default function MobileOpenButton(){
     useEffect(() => {
         const navbar = document.querySelector("div#Navbar");
         const mobileOpenBtn = document.querySelector("div#MobileOpenBtn");
-        const leftIcon = document.querySelector("#left");
         const rightIcon = document.querySelector("#right");
         let i = 0;
         mobileOpenBtn?.addEventListener('click', function(){
