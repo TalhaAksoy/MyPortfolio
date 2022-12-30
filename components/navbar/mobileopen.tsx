@@ -13,16 +13,16 @@ export default function MobileOpenButton(){
             i++;
             if (i % 2 !== 0){
                 navbar?.classList.remove("w-0");
-                navbar?.classList.add("w-16");
+                navbar?.classList.add("w-10/12");
                 mobileOpenBtn.classList.remove("left-0");
-                mobileOpenBtn.classList.add("left-16");
+                mobileOpenBtn.classList.add("left-[83.333333%]");
                 rightIcon?.classList.add("rotate-180");
             }
             else{
                 navbar?.classList.add("w-0");
-                navbar?.classList.remove("w-16");
+                navbar?.classList.remove("w-10/12");
                 mobileOpenBtn.classList.add("left-0");
-                mobileOpenBtn.classList.remove("left-16");
+                mobileOpenBtn.classList.remove("left-[83.333333%]");
                 rightIcon?.classList.remove("rotate-180");
             }
         })
