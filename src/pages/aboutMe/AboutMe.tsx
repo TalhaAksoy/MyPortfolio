@@ -86,44 +86,46 @@ const AboutMe = () => {
 	const containerRef = React.useRef<HTMLDivElement>(null);
 
 	React.useEffect(() => {
-        const container = containerRef.current;
-    const icons = iconsRef.current;
-    const speed = 1; // Hareket hızı (pixel/saniye)
-    const directions = [-1, 1]; // Hareket yönleri (sol veya sağ)
-	let containerRect : any; // Container'ın boyutları
-    if (container) {
-		containerRect = container.getBoundingClientRect();
-        icons.forEach(icon => {
-            if (icon && icon.style) {
-                const { style } = icon;
-                // Rastgele başlangıç konumu belirle (container boyutları içinde)
-                style.left = `${containerRect.left + Math.random() * containerRect.width}px`;
-                style.top = `${containerRect.top + Math.random() * containerRect.height}px`;
-            }
-        });
-    }
-    const interval = setInterval(() => {
-        icons.forEach(icon => {
-            if (icon && icon.style) {
-                const { style } = icon;
-                let left = parseFloat(style.left || "0");
-                let top = parseFloat(style.top || "0");
-                let directionX = directions[Math.floor(Math.random() * directions.length)]; // Rastgele x yönü seç
-                let directionY = directions[Math.floor(Math.random() * directions.length)]; // Rastgele y yönü seç
-                left += speed * directionX;
-                top += speed * directionY;
-                // Ekran sınırlarına çarpma kontrolü
-                if (left < containerRect.left) left = containerRect.left;
-                if (left > containerRect.left + containerRect.width) left = containerRect.left + containerRect.width;
-                if (top < containerRect.top) top = containerRect.top;
-                if (top > containerRect.top + containerRect.height) top = containerRect.top + containerRect.height;
-                style.left = left + "px";
-                style.top = top + "px";
-            }
-        });
-    }, 50); // Hareket güncelleme aralığı (ms)
-    return () => clearInterval(interval);
-}, []);
+		const container = containerRef.current;
+		const icons = iconsRef.current;
+		const speed = 2; // Hareket hızı (pixel/saniye)
+		const directions = [-1, 1]; // Hareket yönleri (sol veya sağ)
+		let containerRect : any; // Container'ın boyutları
+		if (container) {
+			containerRect = container.getBoundingClientRect();
+			icons.forEach(icon => {
+				if (icon && icon.style) {
+					const { style } = icon;
+					// Rastgele başlangıç konumu belirle (container boyutları içinde)
+					style.left = `${containerRect.left + Math.random() * ((containerRect.width * 85) / 100)}px`;
+					style.top = `${containerRect.top + Math.random() * ((containerRect.height * 85) / 100)}px`;
+					console.log(`Container Width ${(containerRect.width * 85) / 100} , Container Height ${(containerRect.height * 85) / 100}`)
+				}
+			});
+		}
+		const interval = setInterval(() => {
+			icons.forEach(icon => {
+				if (icon && icon.style) {
+					const { style } = icon;
+					let left = parseFloat(style.left || "0");
+					let top = parseFloat(style.top || "0");
+					let directionX = directions[Math.floor(Math.random() * directions.length)]; // Rastgele x yönü seç
+					let directionY = directions[Math.floor(Math.random() * directions.length)]; // Rastgele y yönü seç
+					left += speed * directionX;
+					top += speed * directionY;
+					// Ekran sınırlarına çarpma kontrolü
+					if (left < containerRect.left) left = containerRect.left;
+					if (left > containerRect.left + containerRect.width) left = containerRect.left + containerRect.width;
+					if (top < containerRect.top) top = containerRect.top;
+					if (top > containerRect.top + containerRect.height) top = containerRect.top + containerRect.height;
+					style.left = left + "px";
+					style.top = top + "px";
+				}
+			});
+		}, 50); // Hareket güncelleme aralığı (ms)
+		return () => clearInterval(interval);
+	}, []);
+	
 
 
 	const iconComponents = [
@@ -159,7 +161,7 @@ const AboutMe = () => {
 	return (
 		<>
 			<div id="0" className="w-full h-screen page relative flex justify-center items-center">
-				<div ref={containerRef} className=" relative  text-white/80 w-full h-5/6">
+				<div ref={containerRef} className=" relative  text-white/80 w-full h-5/6 overflow-hidden">
 					{iconComponents.map((Icon, index) => (
 						<div
 							key={index}
