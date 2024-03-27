@@ -115,9 +115,9 @@ const AboutMe = () => {
 					top += speed * directionY;
 					// Ekran sınırlarına çarpma kontrolü
 					if (left < containerRect.left) left = containerRect.left;
-					if (left > containerRect.left + containerRect.width) left = containerRect.left + containerRect.width;
+					if (left > containerRect.left + containerRect.width) left = containerRect.width;
 					if (top < containerRect.top) top = containerRect.top;
-					if (top > containerRect.top + containerRect.height) top = containerRect.top + containerRect.height;
+					if (top > containerRect.top + containerRect.height) top = containerRect.height;
 					style.left = left + "px";
 					style.top = top + "px";
 				}
@@ -161,7 +161,7 @@ const AboutMe = () => {
 	return (
 		<>
 			<div id="0" className="w-full h-screen page relative flex justify-center items-center">
-				<div ref={containerRef} className=" relative  text-white/80 w-10/12 h-4/6">
+				<div ref={containerRef} className=" relative  text-white/80 w-10/12 h-4/6 overflow-hidden">
 					{iconComponents.map((Icon, index) => (
 						<div
 							key={index}
