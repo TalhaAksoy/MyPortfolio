@@ -173,7 +173,7 @@ const AboutMe = () => {
 						</div>
 					))}
 				</div>
-				<div className="absolute bg-[#4d425f]/50 xl:w-1/2 w-11/12 rounded-md top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl text-main-textColor flex flex-col justify-start p-2 font-jetbrains z-30">
+				<div className="absolute bg-[#4d425f]/70 xl:w-1/2 w-11/12 rounded-md top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl text-main-textColor flex flex-col justify-start p-2 font-jetbrains z-30">
 					{codeArray.map((item, index) => (
 						<span className={`flex ${item.space} py-1`}>
 							<span className="text-gray-400 w-10">{index + 1}</span>
