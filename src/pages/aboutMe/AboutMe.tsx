@@ -97,9 +97,9 @@ const AboutMe = () => {
 				if (icon && icon.style) {
 					const { style } = icon;
 					// Rastgele başlangıç konumu belirle (container boyutları içinde)
-					style.left = `${containerRect.left + Math.random() * ((containerRect.width * 85) / 100)}px`;
-					style.top = `${containerRect.top + Math.random() * ((containerRect.height * 85) / 100)}px`;
-					console.log(`Container Width ${(containerRect.width * 85) / 100} , Container Height ${(containerRect.height * 85) / 100}`)
+					style.left = `${Math.random() * containerRect.width}px`;
+					style.top = `${Math.random() * containerRect.height}px`;
+					console.log(`Container Width ${containerRect.width} , Container Height ${((containerRect.height * 85) / 100)}`)
 				}
 			});
 		}
@@ -161,7 +161,7 @@ const AboutMe = () => {
 	return (
 		<>
 			<div id="0" className="w-full h-screen page relative flex justify-center items-center">
-				<div ref={containerRef} className=" relative  text-white/80 w-full h-5/6 overflow-hidden">
+				<div ref={containerRef} className=" relative  text-white/80 w-10/12 h-4/6">
 					{iconComponents.map((Icon, index) => (
 						<div
 							key={index}
